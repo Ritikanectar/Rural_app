@@ -17,3 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/customerListdata','App\Http\Controllers\web\WpsapiController@customerList');
+Route::get('/getBusinesses','App\Http\Controllers\api\WaveappController@WaveGetBusinesses');
+Route::get('/getCustomers','App\Http\Controllers\api\WaveappController@WaveGetCustomers');
+Route::get('/createCustomer','App\Http\Controllers\api\WaveappController@WaveCustomerCreate');
