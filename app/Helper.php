@@ -30,7 +30,22 @@ function callcurl($url, $method, $parameter = "") {
     curl_close($ch);
     return $response;
 }
-
+function getGraphQlData($queryword, $data='') {
+    $waveapp = new \Subbe\WaveApp\WaveApp();
+    if($data == ""){
+        $result = $waveapp->$queryword();
+    }else{
+        $result = $waveapp->$queryword($data);
+    }
+    
+    return $result;
+}
+function WavegraphQlMutation($queryword,$inputword,$data) {
+    $waveapp = new \Subbe\WaveApp\WaveApp();
+    $result = $waveapp->$queryword($data, $inputword);
+    
+    return $result;
+}
 function getWaveAppQueryData($url, $query) {
     $curl = curl_init();
 
