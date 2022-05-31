@@ -31,7 +31,7 @@ class WaveappController extends Controller {
     }
 
     public function WaveCustomerCreate(Request $request) {
-       // $waveapp = new \Subbe\WaveApp\WaveApp();
+      
         $customer = [
             "input" => [
                 "businessId" => "QnVzaW5lc3M6ZTY4ZWY2OGYtYjgyZS00NzEzLTlmNTYtYTg1NTI1ZjI3NWNl",
@@ -68,8 +68,6 @@ class WaveappController extends Controller {
             ],
         ];
 
-        // $newCustomer = $waveapp->customerCreate($customer, "CustomerCreateInput");
-        // return $newCustomer;
         $queryword = 'customerCreate';
         $inputword = 'CustomerCreateInput';
         $response = WavegraphQlMutation($queryword,$inputword,$customer);
