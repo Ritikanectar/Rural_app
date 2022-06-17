@@ -19,6 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/customerList','App\Http\Controllers\Api\WpsController@customerList');
-
 
